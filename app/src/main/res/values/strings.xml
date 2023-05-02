@@ -14,6 +14,12 @@
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="login_failed">Login failedq</string>
+    <string name="txt_Menu">Menu</string>
+    <string name="txt_Inventario">Inventario</string>
+    <string name="txt_Salas">Salas</string>
+    <string name="txt_Horario">Horario</string>
+    <string name="txt_Actividades">Actividades</string>
+    <string name="txt_Atras">Atras</string>
 
 </resources>

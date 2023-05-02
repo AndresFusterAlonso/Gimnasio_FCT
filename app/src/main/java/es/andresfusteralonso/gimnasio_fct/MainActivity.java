@@ -1,7 +1,6 @@
 package es.andresfusteralonso.gimnasio_fct;
 
 import android.annotation.SuppressLint;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
@@ -11,10 +10,15 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
 
-import java.io.IOException;
+import org.json.JSONArray;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -84,32 +88,30 @@ public class MainActivity extends AppCompatActivity {
         botonNavegar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*
-                try {
-                    Connection con = new ConnectionClass().CONN();
-                    if (con != null) {
-                        PreparedStatement statement = con.prepareStatement("select * from clientes");
-                        ResultSet result = statement.executeQuery();
-                        Log.println(Log.INFO, "INFO", "Correcto");
-                    } else {
-                        Log.e("ERROR:" ,"La conexión es null");
-                    }
-                } catch (Exception e) {
-                    Log.e("ERROR: ", e.getMessage());
-                }*/
+                Controller controller = new Controller();
+                RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+                queue.start();
+                String ip = "192.168.0.18:1337";
+                String ip_emulator = "10.0.2.2:1337";
+                String url = "http://" + ip + "/monitores";
+                JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
+                        (Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
 
+                            @Override
+                            public void onResponse(JSONArray response) {
+                                controller.onSuccess(response);
+                            }
+                        }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                               controller.onError(error);
+                            }
+                        });
 
-                APIJson api = new APIJson();
-                try {
-                    JSONObject object = api.readJsonFromUrl("http://10.0.2.2:1337/monitores");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+                queue.add(jsonArrayRequest);
+                // TODO Posible solución pasar a pantalla de carga hasta que se procese la información en Controller
 
-
-
+                // TODO En caso de no usar nada de este codigo borrar
                 /*
                 Connection con;
                 try {
