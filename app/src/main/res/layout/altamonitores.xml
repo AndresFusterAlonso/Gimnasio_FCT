@@ -1,6 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/lblFechaBajaMO"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="34dp"
+        android:background="#8BC34A"
+        android:text="@string/txtFechaB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/edFechaBajaMO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblFechaAltaMO"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <EditText
+        android:id="@+id/edFechaBajaMO"
+        android:layout_width="197dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblFechaBajaMO"
+        app:layout_constraintTop_toBottomOf="@+id/edFechaAltaMO"
+        app:layout_constraintVertical_bias="0.084" />
+
+    <TextView
+        android:id="@+id/lblFechaAltaMO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="49dp"
+        android:background="#8BC34A"
+        android:text="@string/txtFechaA"
+        app:layout_constraintEnd_toStartOf="@+id/edFechaAltaMO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblContratoMO" />
+
+    <EditText
+        android:id="@+id/edFechaAltaMO"
+        android:layout_width="197dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="43dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblFechaAltaMO"
+        app:layout_constraintTop_toBottomOf="@+id/slContratoMO" />
+
+    <Spinner
+        android:id="@+id/slContratoMO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="189dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblContratoMO"
+        app:layout_constraintTop_toBottomOf="@+id/slSexoMO" />
+
+    <TextView
+        android:id="@+id/lblContratoMO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="63dp"
+        android:background="#8BC34A"
+        android:text="@string/txtContrato"
+        app:layout_constraintEnd_toStartOf="@+id/slContratoMO"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblSexoMO" />
+
+    <TextView
+        android:id="@+id/lblSexoMO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="77dp"
+        android:background="#8BC34A"
+        android:text="@string/txtSexo"
+        app:layout_constraintEnd_toStartOf="@+id/slSexoMO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblCorreoMO" />
+
+    <Spinner
+        android:id="@+id/slSexoMO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="189dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblSexoMO"
+        app:layout_constraintTop_toBottomOf="@+id/edCorreoMO" />
+
+    <TextView
+        android:id="@+id/lblCorreoMO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="78dp"
+        android:background="#8BC34A"
+        android:text="@string/txtCorreo"
+        app:layout_constraintEnd_toStartOf="@+id/edCorreoMO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTelefonoMO" />
+
+    <EditText
+        android:id="@+id/edCorreoMO"
+        android:layout_width="197dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblCorreoMO"
+        app:layout_constraintTop_toBottomOf="@+id/edTelefonoMO" />
+
+    <EditText
+        android:id="@+id/edTelefonoMO"
+        android:layout_width="197dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edDniMO" />
+
+    <TextView
+        android:id="@+id/lblTelefonoMO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="82dp"
+        android:background="#8BC34A"
+        android:text="@string/txtTelefono"
+        app:layout_constraintEnd_toStartOf="@+id/edTelefonoMO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbldniMO" />
+
+    <TextView
+        android:id="@+id/lbldniMO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="87dp"
+        android:background="#8BC34A"
+        android:text="@string/txtDNI"
+        app:layout_constraintEnd_toStartOf="@+id/edDniMO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblApellidosMO" />
+
+    <EditText
+        android:id="@+id/edDniMO"
+        android:layout_width="197dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edApellidosMO" />
+
+    <EditText
+        android:id="@+id/edApellidosMO"
+        android:layout_width="197dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edNombreMO" />
+
+    <TextView
+        android:id="@+id/lblApellidosMO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="87dp"
+        android:background="#8BC34A"
+        android:text="@string/txtApellidos"
+        app:layout_constraintEnd_toStartOf="@+id/edApellidosMO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombreMO" />
+
+    <EditText
+        android:id="@+id/edNombreMO"
+        android:layout_width="197dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edApellidosCL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblNombreCL"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblNombreMO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="50dp"
+        android:background="#8BC34A"
+        android:text="@string/lblNombre"
+        app:layout_constraintBottom_toTopOf="@+id/lblApellidosCL"
+        app:layout_constraintEnd_toStartOf="@+id/edNombreMO"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

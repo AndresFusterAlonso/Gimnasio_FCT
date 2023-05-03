@@ -1,6 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Spinner
+        android:id="@+id/slSalapo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="193dp"
+        android:layout_marginBottom="25dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/edMarcaPO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblSalaPO"
+        app:layout_constraintTop_toBottomOf="@+id/edTipoMO" />
+
+    <TextView
+        android:id="@+id/lblNombrePO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="56dp"
+        android:background="#8BC34A"
+        android:text="@string/lblNombre"
+        app:layout_constraintEnd_toStartOf="@+id/edNombrePO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edNombrePO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="59dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblNombrePO"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblTipoMO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="52dp"
+        android:background="#8BC34A"
+        android:text="@string/txttipo"
+        app:layout_constraintEnd_toStartOf="@+id/edTipoMO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombrePO" />
+
+    <EditText
+        android:id="@+id/edTipoMO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblTipoMO"
+        app:layout_constraintTop_toBottomOf="@+id/edNombrePO" />
+
+    <TextView
+        android:id="@+id/lblSalaPO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="43dp"
+        android:background="#8BC34A"
+        android:text="@string/txt_Salas"
+        app:layout_constraintBottom_toTopOf="@+id/lblMarcaPO"
+        app:layout_constraintEnd_toStartOf="@+id/slSalapo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTipoMO" />
+
+    <TextView
+        android:id="@+id/lblMarcaPO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="100dp"
+        android:background="#8BC34A"
+        android:text="@string/txtMarca"
+        app:layout_constraintEnd_toStartOf="@+id/edMarcaPO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblSalaPO" />
+
+    <EditText
+        android:id="@+id/edMarcaPO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="29dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edModeloPO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblMarcaPO"
+        app:layout_constraintTop_toBottomOf="@+id/slSalapo" />
+
+    <TextView
+        android:id="@+id/lblModeloPO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginBottom="70dp"
+        android:background="#8BC34A"
+        android:text="@string/txtModelo"
+        app:layout_constraintBottom_toTopOf="@+id/lblPrecioPO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblMarcaPO" />
+
+    <EditText
+        android:id="@+id/edModeloPO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="29dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edPrecioPO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblModeloPO"
+        app:layout_constraintTop_toBottomOf="@+id/edMarcaPO" />
+
+    <TextView
+        android:id="@+id/lblPrecioPO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="97dp"
+        android:background="#8BC34A"
+        android:text="@string/txtPrecio"
+        app:layout_constraintEnd_toStartOf="@+id/edPrecioPO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblModeloPO" />
+
+    <EditText
+        android:id="@+id/edPrecioPO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="205dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btnAtrasPO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edModeloPO" />
+
+    <Button
+        android:id="@+id/btnAceptarPO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="215dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="27dp"
+        android:text="@string/btnAceptar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAtrasPO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblPrecioPO" />
+
+    <Button
+        android:id="@+id/btnAtrasPO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="27dp"
+        android:text="@string/txt_Atras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAceptarPO" />
 </androidx.constraintlayout.widget.ConstraintLayout>

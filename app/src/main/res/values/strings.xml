@@ -21,5 +21,21 @@
     <string name="txt_Horario">Horario</string>
     <string name="txt_Actividades">Actividades</string>
     <string name="txt_Atras">Atras</string>
-
+    <string name="lblNombre">Nombre</string>
+    <string name="btnanadir">Añadir</string>
+    <string name="btnAceptar">Aceptar</string>
+    <string name="txttipo">Tipo</string>
+    <string name="txtDescripcion">Descripción</string>
+    <string name="txtApellidos">Apellidos</string>
+    <string name="txtDNI">DNI</string>
+    <string name="txtTelefono">Telefono</string>
+    <string name="txtCorreo">Correo</string>
+    <string name="txtSexo">Sexo</string>
+    <string name="txtTarifa">Tarifa</string>
+    <string name="txtFechaA">Fecha de Alta</string>
+    <string name="txtFechaB">Fecha de Baja</string>
+    <string name="txtContrato">Contrato</string>
+    <string name="txtMarca">Marca</string>
+    <string name="txtModelo">Modelo</string>
+    <string name="txtPrecio">Precio</string>
 </resources>

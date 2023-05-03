@@ -1,6 +1,248 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/lblNombreCL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginBottom="50dp"
+        android:background="#8BC34A"
+        android:text="@string/lblNombre"
+        app:layout_constraintBottom_toTopOf="@+id/lblApellidosCL"
+        app:layout_constraintEnd_toStartOf="@+id/edNombreCL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblApellidosCL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="29dp"
+        android:background="#8BC34A"
+        android:text="@string/txtApellidos"
+        app:layout_constraintBottom_toTopOf="@+id/lbldniCL"
+        app:layout_constraintEnd_toStartOf="@+id/edApellidosCL"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lbldniCL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="49dp"
+        android:background="#8BC34A"
+        android:text="@string/txtDNI"
+        app:layout_constraintBottom_toTopOf="@+id/lblTelefonoCL"
+        app:layout_constraintEnd_toStartOf="@+id/edDniCL"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edNombreCL"
+        android:layout_width="197dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginEnd="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edApellidosCL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toEndOf="@+id/lblNombreCL"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edApellidosCL"
+        android:layout_width="197dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edDniCL"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/edDniCL"
+        android:layout_width="197dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="38dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edTelefonoCL"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/edTelefonoCL"
+        android:layout_width="197dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/edCorreoCL"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/lblTelefonoCL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="39dp"
+        android:background="#8BC34A"
+        android:text="@string/txtTelefono"
+        app:layout_constraintBottom_toTopOf="@+id/lblCorreoCL"
+        app:layout_constraintEnd_toStartOf="@+id/edTelefonoCL"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblCorreoCL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="55dp"
+        android:background="#8BC34A"
+        android:text="@string/txtCorreo"
+        app:layout_constraintBottom_toTopOf="@+id/lblSexoCL"
+        app:layout_constraintEnd_toStartOf="@+id/edCorreoCL"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edCorreoCL"
+        android:layout_width="197dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/slSexoCL"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/lblSexoCL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginBottom="36dp"
+        android:background="#8BC34A"
+        android:text="@string/txtSexo"
+        app:layout_constraintBottom_toTopOf="@+id/lblTarifaCL"
+        app:layout_constraintEnd_toStartOf="@+id/slSexoCL"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Spinner
+        android:id="@+id/slSexoCL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="198dp"
+        android:layout_marginBottom="31dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/slTarifaCL"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Spinner
+        android:id="@+id/slTarifaCL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="198dp"
+        android:layout_marginBottom="36dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/edFechaAltaCL"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/lblTarifaCL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginBottom="47dp"
+        android:background="#8BC34A"
+        android:text="@string/txtTarifa"
+        app:layout_constraintBottom_toTopOf="@+id/lblFechaAltaCL"
+        app:layout_constraintEnd_toStartOf="@+id/slTarifaCL"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblFechaAltaCL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="50dp"
+        android:background="#8BC34A"
+        android:text="@string/txtFechaA"
+        app:layout_constraintBottom_toTopOf="@+id/lblFechaBaja"
+        app:layout_constraintEnd_toStartOf="@+id/edFechaAltaCL"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblFechaBaja"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="109dp"
+        android:background="#8BC34A"
+        android:text="@string/txtFechaB"
+        app:layout_constraintBottom_toTopOf="@+id/btnAceptarCL"
+        app:layout_constraintEnd_toStartOf="@+id/edFechaBajaCL"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edFechaAltaCL"
+        android:layout_width="197dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="39dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/edFechaBajaCL"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/edFechaBajaCL"
+        android:layout_width="197dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="107dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/btnAtrasCl"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnAceptarCL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/btnAceptar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAtrasCl"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnAtrasCl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="34dp"
+        android:text="@string/txt_Atras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

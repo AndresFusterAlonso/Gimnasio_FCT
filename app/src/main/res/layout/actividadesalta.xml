@@ -1,6 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/btnAltaAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="430dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="29dp"
+        android:text="@string/btnAceptar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAtrasAC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edDescripcionAC" />
+
+    <Button
+        android:id="@+id/btnAtrasAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="430dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="29dp"
+        android:text="@string/txt_Atras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAltaAC"
+        app:layout_constraintTop_toBottomOf="@+id/edDescripcionAC" />
+
+    <TextView
+        android:id="@+id/lblNombreAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="326dp"
+        android:layout_marginBottom="587dp"
+        android:text="@string/lblNombre"
+        app:layout_constraintBottom_toTopOf="@+id/btnAltaAC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtNombreAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edTipoAC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblNombreAC"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edTipoAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="69dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lbltipoAC"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombreAC" />
+
+    <EditText
+        android:id="@+id/edDescripcionAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="69dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btnAltaAC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblDescripcionAC"
+        app:layout_constraintTop_toBottomOf="@+id/edTipoAC" />
+
+    <TextView
+        android:id="@+id/lbltipoAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="39dp"
+        android:text="@string/txttipo"
+        app:layout_constraintBottom_toTopOf="@+id/lblDescripcionAC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombreAC" />
+
+    <TextView
+        android:id="@+id/lblDescripcionAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="447dp"
+        android:text="@string/txtDescripcion"
+        app:layout_constraintBottom_toTopOf="@+id/btnAltaAC"
+        app:layout_constraintEnd_toStartOf="@+id/edDescripcionAC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbltipoAC" />
 </androidx.constraintlayout.widget.ConstraintLayout>
