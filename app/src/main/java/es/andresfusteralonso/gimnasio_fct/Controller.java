@@ -10,6 +10,8 @@ import org.json.JSONObject;
 public class Controller {
     private String password;
     private String email;
+    public Boolean resultado_correcto = false;
+
     public void onSuccess(JSONArray result) {
         Log.i("INFO: ", result.toString());
         String email_db = null, password_db = null;
@@ -22,7 +24,7 @@ public class Controller {
         }
 
         if(password_db == password && email == email_db && email_db != null && password_db != null) {
-            // TODO Pasamos al siguiente view
+            this.resultado_correcto = true;
         } else {
             // TODO Pasamos al view de error
         }
