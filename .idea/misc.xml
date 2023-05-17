@@ -11,19 +11,29 @@
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/actividades.xml" value="0.2765625" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/actividades_listview.xml" value="0.2765625" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/actividadesalta.xml" value="0.2765625" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_editar_monitor.xml" value="0.33" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_informacion_monitor.xml" value="0.25" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_login.xml" value="0.2765625" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/altaclientes.xml" value="0.33" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_monitor.xml" value="0.23278985507246377" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/altaclientes.xml" value="0.25" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/altaclientes_listview.xml" value="0.2765625" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/altamonitores.xml" value="0.33" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/altamonitores.xml" value="0.25" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/altaproducto.xml" value="0.33" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/altasalas.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/clientes.xml" value="0.25" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/clientes_listview.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/editar_cliente.xml" value="0.25" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/horarioclientes.xml" value="0.26856884057971014" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/informacion_cliente.xml" value="0.2" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/inventario.xml" value="0.2765625" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/inventario_listview.xml" value="0.2765625" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/menuprincipal.xml" value="0.33" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/monitores.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/monitores_listview.xml" value="1.569078947368421" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/monitores_listview.xml" value="0.22" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/salas.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/single_item_clientes.xml" value="0.36277173913043476" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/single_item_monitores.xml" value="0.18" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.22135416666666666" />
       </map>

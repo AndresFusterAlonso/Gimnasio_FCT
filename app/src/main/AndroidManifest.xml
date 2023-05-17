@@ -3,6 +3,8 @@
     package="es.andresfusteralonso.gimnasio_fct">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,10 +15,55 @@
         android:theme="@style/Theme.Gimnasio_FCT"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".InformacionMonitor"
+            android:exported="false" />
+        <activity
+            android:name=".EditarMonitor"
+            android:exported="false" />
+        <activity
+            android:name=".Monitor"
+            android:exported="false" />
+        <activity
+            android:name=".InformacionCliente"
+            android:exported="false" />
+        <activity
+            android:name=".EditarCliente"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".Horario_Clientes"
+            android:exported="true" />
+        <activity
+            android:name=".actividades"
+            android:exported="true" />
+        <activity
+            android:name=".Alta_Actividades"
+            android:exported="true" />
+        <activity
+            android:name=".Alta_Cliente"
+            android:exported="true" />
+        <activity
+            android:name=".Alta_Monitor"
+            android:exported="true" />
+        <activity
+            android:name=".Alta_Producto"
+            android:exported="true" />
+        <activity
+            android:name=".Alta_Salas"
+            android:exported="true" />
+        <activity
+            android:name=".Clientes"
+            android:exported="true" />
+        <activity
+            android:name=".Inventario"
+            android:exported="true" />
+        <activity
+            android:name=".Monitores"
+            android:exported="true" />
+        <activity
+            android:name=".Salas"
             android:exported="true" />
         <activity
             android:name=".MenuPrincipal"

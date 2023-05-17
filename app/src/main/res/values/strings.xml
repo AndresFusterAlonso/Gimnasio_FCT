@@ -38,4 +38,10 @@
     <string name="txtMarca">Marca</string>
     <string name="txtModelo">Modelo</string>
     <string name="txtPrecio">Precio</string>
+    <string name="txtMenuPrincipal">MenuPrincipal</string>
+    <string name="txtAltaCL">AltaCL</string>
+    <string name="btnGuardar">Guardar</string>
+    <string name="RBMasculino">Masculino</string>
+    <string name="RBFemenino">Femenino</string>
+    <string name="btnEliminar">Eliminar</string>
 </resources>

@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
+    android:background="@drawable/imagenfondo"
     tools:context=".LoginActivity">
 
     <EditText
         android:id="@+id/username1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="150dp"
         android:hint="User Name" />
 
     <EditText
@@ -20,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/username1"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="-166dp"
+        android:layout_marginBottom="-260dp"
         android:hint="Password" />
 
     <Button
@@ -29,7 +30,19 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/password1"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="-169dp"
-        android:text="continuar"/>
+        android:layout_marginBottom="-170dp"
+        android:background="@drawable/btncuenta"
+        android:text="continuar"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="142dp"
+        android:layout_marginTop="50dp"
+        android:text="LOG IN"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp" />
 
 </RelativeLayout>

@@ -7,6 +7,20 @@
     android:background="@drawable/imagenfondo"
     >
 
+    <Button
+        android:id="@+id/btnEliminarMOED"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/btncuenta"
+        android:text="@string/btnEliminar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnCancelarMO"
+        app:layout_constraintStart_toEndOf="@+id/btnAceptarMO" />
+
     <RadioGroup
         android:id="@+id/rgCLAL"
         android:layout_width="233dp"
@@ -78,6 +92,7 @@
         android:hint="@string/txtCorreo"
         android:inputType="textEmailAddress"
         android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edTelefonoMO" />
 
@@ -126,6 +141,7 @@
         android:hint="@string/txtDNI"
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edApellidosMO" />
 
@@ -139,6 +155,7 @@
         android:hint="@string/txtApellidos"
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edNombreMO" />
 
@@ -163,6 +180,7 @@
         android:hint="@string/lblNombre"
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -181,7 +199,7 @@
         android:id="@+id/btnAceptarMO"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
+        android:layout_marginStart="14dp"
         android:layout_marginBottom="35dp"
         android:background="@drawable/btncuenta"
 
@@ -194,15 +212,13 @@
         android:id="@+id/btnCancelarMO"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginEnd="73dp"
+        android:layout_marginEnd="14dp"
         android:layout_marginBottom="35dp"
         android:background="@drawable/btncuenta"
         android:text="@android:string/cancel"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnAceptarMO" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/edContrato"
@@ -214,6 +230,8 @@
         android:hint="@string/txtContrato"
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rgCLAL" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
