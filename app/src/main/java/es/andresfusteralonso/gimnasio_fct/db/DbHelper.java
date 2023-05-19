@@ -51,6 +51,28 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String COLUMN_FECHA_ALTAMO = "fechaAltaMO";
     public static final String COLUMN_FECHA_BAJAMO = "fechaBajaMO";
 
+    //Inventario Info
+    public static final String COLUMN_IDPO = "idPO";
+    public static final String COLUMN_NOMBREPO = "nombrePO";
+    public static final String COLUMN_MODELOPO = "modelo";
+    public static final String COLUMN_TIPOPO = "tipoPO";
+    public static final String COLUMN_SALA = "sala_id";
+    public static final String COLUMN_MARCA = "marca";
+    public static final String COLUMN_PRECIO = "precio";
+
+    //Salas Info
+    public static final String COLUMN_IDSA = "idSA";
+    public static final String COLUMN_NOMBRESA = "nombreSA";
+    public static final String COLUMN_DIMENSION = "dimension";
+    public static final String COLUMN_AFORO = "aforo";
+    public static final String COLUMN_DESCRIPCION = "descripcion";
+
+    //Actividad Info
+    public static final String COLUMN_IDAC = "idAC";
+    public static final String COLUMN_NOMBREAC = "nombreAC";
+    public static final String COLUMN_TIPOAC = "tipoAC";
+    public static final String COLUMN_DESCRIPCIONAC = "descripcionAC";
+
     private Context mContext;
 
     public DbHelper(@Nullable Context context) {
@@ -61,12 +83,13 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
-            sqLiteDatabase.execSQL("CREATE TABLE users(username TEXT PRIMARY KEY, password TEXT)");
-            sqLiteDatabase.execSQL("CREATE TABLE clientes (idCL INTEGER PRIMARY KEY AUTOINCREMENT, nombreCL TEXT NOT NULL, apellidosCL TEXT, dniCL TEXT, telefonoCL INTEGER, correoCL TEXT, sexoCL TEXT, tarifa TEXT )");
-            sqLiteDatabase.execSQL("CREATE TABLE monitores (idMO INTEGER PRIMARY KEY AUTOINCREMENT, nombreMO TEXT NOT NULL, apellidosMO TEXT, dniMO TEXT, telefonoMO INTEGER, correoMO TEXT, sexoMO TEXT, contrato TEXT )");
-            sqLiteDatabase.execSQL("CREATE TABLE inventario (idPO INTEGER PRIMARY KEY AUTOINCREMENT, nombrePO TEXT NOT NULL, tipoPO TEXT, sala TEXT, marca INTEGER, modelo TEXT, precio REAL )");
-            sqLiteDatabase.execSQL("CREATE TABLE salas (idSA INTEGER PRIMARY KEY AUTOINCREMENT, nombreSA TEXT NOT NULL, dimension REAL, aforo INTEGER, descripcion TEXT )");
-            sqLiteDatabase.execSQL("CREATE TABLE actividades (id INTEGER PRIMARY KEY AUTOINCREMENT, nombreAC TEXT NOT NULL, tipoAC TEXT, descripcion TEXT)");
+        sqLiteDatabase.execSQL("CREATE TABLE users (username TEXT PRIMARY KEY, password TEXT)");
+        sqLiteDatabase.execSQL("CREATE TABLE clientes (idCL INTEGER PRIMARY KEY AUTOINCREMENT, nombreCL TEXT NOT NULL, apellidosCL TEXT, dniCL TEXT, telefonoCL INTEGER, correoCL TEXT, sexoCL TEXT, tarifa TEXT)");
+        sqLiteDatabase.execSQL("CREATE TABLE monitores (idMO INTEGER PRIMARY KEY AUTOINCREMENT, nombreMO TEXT NOT NULL, apellidosMO TEXT, dniMO TEXT, telefonoMO INTEGER, correoMO TEXT, sexoMO TEXT, contrato TEXT)");
+        sqLiteDatabase.execSQL("CREATE TABLE inventario (idPO INTEGER PRIMARY KEY AUTOINCREMENT, nombrePO TEXT NOT NULL, tipoPO TEXT, sala_id INTEGER, marca INTEGER, modelo TEXT, precio REAL, FOREIGN KEY(sala_id) REFERENCES salas(idSA))");
+        sqLiteDatabase.execSQL("CREATE TABLE salas (idSA INTEGER PRIMARY KEY AUTOINCREMENT, nombreSA TEXT NOT NULL, dimension REAL, aforo INTEGER, descripcion TEXT)");
+        sqLiteDatabase.execSQL("CREATE TABLE actividades (idAC INTEGER PRIMARY KEY AUTOINCREMENT, nombreAC TEXT NOT NULL, tipoAC TEXT, descripcionAC TEXT)");
+
 
     }
     @Override
@@ -112,7 +135,46 @@ public class DbHelper extends SQLiteOpenHelper {
                 DbHelper.COLUMN_IDMO + " = " + MonitorID, null);
         return i;
     }
+    public int actualizarDatosPO(int ProductoID, String nombrePO, String tipoPO, String sala, String marca, String modelo, String precio) {
 
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues cvActualizar = new ContentValues();
+        cvActualizar.put(DbHelper.COLUMN_NOMBREPO, nombrePO);
+        cvActualizar.put(DbHelper.COLUMN_TIPOPO, tipoPO);
+        cvActualizar.put(DbHelper.COLUMN_SALA, sala);
+        cvActualizar.put(DbHelper.COLUMN_MARCA, marca);
+        cvActualizar.put(DbHelper.COLUMN_MODELOPO, modelo);
+        cvActualizar.put(DbHelper.COLUMN_PRECIO, precio);
+
+        int i = db.update(DbHelper.TABLE_INVENTARIO, cvActualizar,
+                DbHelper.COLUMN_IDPO + " = " + ProductoID, null);
+        return i;
+    }
+    public int actualizarDatosSA(int SalaID, String nombrePO, String dimension, String aforo, String descripcion) {
+
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues cvActualizar = new ContentValues();
+        cvActualizar.put(DbHelper.COLUMN_NOMBRESA, nombrePO);
+        cvActualizar.put(DbHelper.COLUMN_DIMENSION, dimension);
+        cvActualizar.put(DbHelper.COLUMN_AFORO, aforo);
+        cvActualizar.put(DbHelper.COLUMN_DESCRIPCION, descripcion);
+
+        int i = db.update(DbHelper.TABLE_SALAS, cvActualizar,
+                DbHelper.COLUMN_IDSA + " = " + SalaID, null);
+        return i;
+    }
+    public int actualizarDatosAC(int ActividadID, String nombreAC, String tipoAC, String descripcionAC) {
+
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues cvActualizar = new ContentValues();
+        cvActualizar.put(DbHelper.COLUMN_NOMBREAC, nombreAC);
+        cvActualizar.put(DbHelper.COLUMN_TIPOAC, tipoAC);
+        cvActualizar.put(DbHelper.COLUMN_DESCRIPCIONAC, descripcionAC);
+
+        int i = db.update(DbHelper.TABLE_ACTIVIDADES, cvActualizar,
+                DbHelper.COLUMN_IDAC + " = " + ActividadID, null);
+        return i;
+    }
     public Boolean insertData(String username, String password){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -154,15 +216,68 @@ public class DbHelper extends SQLiteOpenHelper {
         else
             return true;
     }
+
+    public Boolean addProducto(String nombre, String tipo, String sala, String marca, String modelo, String precio) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("nombrePO", nombre);
+        contentValues.put("tipoPO", tipo);
+        contentValues.put("sala_id", sala);
+        contentValues.put("marca", marca);
+        contentValues.put("modelo", modelo);
+        contentValues.put("precio", precio);
+        long result = db.insert(TABLE_INVENTARIO, null, contentValues);
+        if (result ==-1) return false;
+        else
+            return true;
+    }
+    public Boolean addSala(String nombre, String dimension, String aforo, String descripcion) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("nombreSA", nombre);
+        contentValues.put("dimension", dimension);
+        contentValues.put("aforo", aforo);
+        contentValues.put("descripcion", descripcion);
+        long result = db.insert(TABLE_SALAS, null, contentValues);
+        if (result ==-1) return false;
+        else
+            return true;
+    }
+    public Boolean addActividad(String nombreAC, String tipoAC, String descripcionAC) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("nombreAC", nombreAC);
+        contentValues.put("tipoAC", tipoAC);
+        contentValues.put("descripcionAC", descripcionAC);
+        long result = db.insert(TABLE_ACTIVIDADES, null, contentValues);
+        if (result ==-1) return false;
+        else
+            return true;
+    }
     public void deleteDataCL(int clienteID) {
         SQLiteDatabase db = getWritableDatabase();
         db.delete(DbHelper.TABLE_CLIENTES, DbHelper.COLUMN_IDCL + "="
                 + clienteID, null);
     }
-    public void deleteDataMO(int clienteID) {
+    public void deleteDataMO(int monitorID) {
         SQLiteDatabase db = getWritableDatabase();
         db.delete(DbHelper.TABLE_MONITORES, DbHelper.COLUMN_IDMO + "="
-                + clienteID, null);
+                + monitorID, null);
+    }
+    public void deleteDataPO(int productoID) {
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete(DbHelper.TABLE_INVENTARIO, DbHelper.COLUMN_IDPO + "="
+                + productoID, null);
+    }
+    public void deleteDataAC(int ActividadID) {
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete(DbHelper.TABLE_ACTIVIDADES, DbHelper.COLUMN_IDAC + "="
+                + ActividadID, null);
+    }
+    public void deleteDataSA(int salaID) {
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete(DbHelper.TABLE_SALAS, DbHelper.COLUMN_IDSA + "="
+                + salaID, null);
     }
     public Cursor leerDatosCL() {
         SQLiteDatabase db = getWritableDatabase();

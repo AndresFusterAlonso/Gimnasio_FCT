@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -72,6 +71,50 @@ public class Clientes extends Activity {
             telefonoTextView.setText(cliente.getTelefono());
             tarifaTextView.setText(cliente.getTarifa());
             sexoTextView.setText(cliente.getSexo());
+
+            Button btnVerInfo = convertView.findViewById(R.id.btnInformacionCL);
+            btnVerInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Crea un Intent para iniciar la actividad de información detallada
+                    Intent intent = new Intent(getContext(), InformacionCliente.class);
+
+                    // Pasa los datos necesarios a través del Intent
+                    intent.putExtra("nombreCL", cliente.getNombre());
+                    intent.putExtra("apellidosCL", cliente.getApellidos());
+                    intent.putExtra("dniCL", cliente.getDni());
+                    intent.putExtra("telefonoCL", cliente.getTelefono());
+                    intent.putExtra("correoCL", cliente.getCorreo());
+                    intent.putExtra("sexoCL", cliente.getSexo());
+                    intent.putExtra("tarifaCL", cliente.getTarifa());
+
+                    // Inicia la actividad de información detallada
+                    getContext().startActivity(intent);
+                }
+            });
+
+            Button btnEditar = convertView.findViewById(R.id.btnEditarCL);
+            btnEditar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Crear un Intent para abrir la actividad de edición
+                    Intent intent = new Intent(getContext(), EditarCliente.class);
+
+                    // Pasar los datos del cliente a la actividad de edición
+                    intent.putExtra("idCL", cliente.getId());
+                    intent.putExtra("nombreCL", cliente.getNombre());
+                    intent.putExtra("apellidosCL", cliente.getApellidos());
+                    intent.putExtra("dniCL", cliente.getDni());
+                    intent.putExtra("telefonoCL", cliente.getTelefono());
+                    intent.putExtra("correoCL", cliente.getCorreo());
+                    intent.putExtra("sexoCL", cliente.getSexo());
+                    intent.putExtra("tarifaCL", cliente.getTarifa());
+
+                    // Iniciar la actividad de edición
+                    getContext().startActivity(intent);
+                }
+            });
+
             return convertView;
         }
     }
@@ -83,7 +126,7 @@ public class Clientes extends Activity {
 
         DB = new DbHelper(this);
         SQLiteDatabase db = DB.getReadableDatabase();
-        listViewClientes = findViewById(R.id.listclientes);
+        listViewClientes = findViewById(R.id.listClientes);
         listaClientes = new ArrayList<Cliente>();
         adapterClientes = new ClienteAdapter(this, listaClientes);
         listViewClientes.setAdapter(adapterClientes);
@@ -143,7 +186,12 @@ public class Clientes extends Activity {
             }
         });
 
-        listViewClientes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+    }
+}
+
+
+
+      /*listViewClientes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // Obtener el cliente seleccionado
@@ -165,88 +213,4 @@ public class Clientes extends Activity {
                 // Iniciar la actividad de edición
                 startActivity(intent);
             }
-        });
-    }
-}
-        /*List<Client> clients = DB.getAllClients();
-        ArrayAdapter<Client> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, clients);
-        listView.setAdapter(adapter);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        List<Client> clients = DB.getAllClients();
-        ArrayAdapter<Client> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, clients);
-        listView.setAdapter(adapter);
-    }
-
-    @Override
-    protected void onDestroy() {
-        DB.close();
-        super.onDestroy();
-    }
-} */
-
-
-
-
-        /*istView = findViewById(R.id.listclientes);
-                editTextNombre = findViewById(R.id.edNombreCL);
-                editTextApellidos = findViewById(R.id.edApellidosCL);
-                editTextDNI = findViewById(R.id.edDniCL);
-                editTextTelefono = findViewById(R.id.edTelefonoCL);
-                editTextCorreo = findViewById(R.id.edCorreoCL);
-                radioGroupSexo = findViewById(R.id.radio_group_sexo);
-                editTextTarifa = findViewById(R.id.edTarifaCL);
-                btnInsertar = findViewById(R.id.btnAceptarCL);
-
-
-                /*String nombre = editTextNombre.getText().toString();
-                String apellidos = editTextApellidos.getText().toString();
-                String dni = editTextDNI.getText().toString();
-                String telefono = editTextTelefono.getText().toString();
-                String correo = editTextCorreo.getText().toString();
-                int selectedId = radioGroupSexo.getCheckedRadioButtonId();
-                String sexo = "";
-                if (selectedId == R.id.radio_button_masculino) {
-                    sexo = "Masculino";
-                } else if (selectedId == R.id.radio_button_femenino) {
-                    sexo = "Femenino";
-                }
-                String tarifa = editTextTarifa.getText().toString();
-
-                ContentValues values = new ContentValues();
-                values.put(DbHelper.COLUMN_NOMBRE, nombre);
-                values.put(DbHelper.COLUMN_APELLIDOS, apellidos);
-                values.put(DbHelper.COLUMN_DNI, dni);
-                values.put(DbHelper.COLUMN_TELEFONO, telefono);
-                values.put(DbHelper.COLUMN_CORREO, correo);
-                values.put(DbHelper.COLUMN_CORREO, sexo);
-                values.put(DbHelper.COLUMN_TARIFA, tarifa);
-                values.put(DbHelper.COLUMN_FECHA_ALTA, System.currentTimeMillis());
-                values.put(DbHelper.COLUMN_FECHA_BAJA, System.currentTimeMillis());
-
-                database.insert(DbHelper.TABLE_CLIENTES, null, values);
-
-                mostrarRegistros();
-            }
-        });
-
-        mostrarRegistros();
-    }
-
-    private void mostrarRegistros() {
-        Cursor cursor = database.query(
-                DbHelper.TABLE_CLIENTES,
-                new String[] {DbHelper.COLUMN_NOMBRE, DbHelper.COLUMN_CORREO},
-                null, null, null, null, null);
-
-        String[] fromColumns = {DbHelper.COLUMN_NOMBRE, DbHelper.COLUMN_CORREO};
-        int[] toViews = {R.id.edNombreCL, R.id.edCorreoCL};
-        SimpleCursorAdapter adapter = new SimpleCursorAdapter(
-                this, R.layout.single_item_clientes, cursor, fromColumns, toViews, 0);
-
-        listView.setAdapter(adapter);
-    }
-}*/
+        });*/

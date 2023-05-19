@@ -10,10 +10,11 @@
         android:id="@+id/btnInformacionCL"
         android:layout_width="wrap_content"
         android:layout_height="29dp"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="10dp"
         android:background="@drawable/btncuenta"
         android:text="INFO"
-        android:layout_alignParentEnd="true" />
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/btnEditarCL"
@@ -22,9 +23,10 @@
         android:layout_marginTop="10dp"
 
         android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@id/btnInformacionCL"
         android:background="@drawable/btncuenta"
         android:text="EDITAR"
-        android:layout_toStartOf="@id/btnInformacionCL" />
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/item_nombre"
@@ -36,7 +38,7 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:id="@+id/item_correo"
+        android:id="@+id/item_tipo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lblEmail"
@@ -47,63 +49,48 @@
         android:layout_marginTop="8dp" />
 
     <TextView
-        android:id="@+id/item_apellidos"
+        android:id="@+id/item_sala"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lblEmail"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:visibility="gone"
-        android:layout_below="@id/item_correo"
+        android:layout_below="@id/item_tipo"
         android:layout_alignParentStart="true"
         android:layout_marginTop="8dp" />
 
     <TextView
-        android:id="@+id/item_dni"
+        android:id="@+id/item_marca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/lblEmail"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:visibility="gone"
-        android:layout_below="@id/item_apellidos"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="8dp" />
+        android:text="@string/lblNombre"
+        android:visibility="gone"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp" />
 
     <TextView
-        android:id="@+id/item_telefono"
+        android:id="@+id/item_modelo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/lblEmail"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:visibility="gone"
-        android:layout_below="@id/item_dni"
+        android:layout_below="@id/item_nombre"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:text="@string/lblEmail"
+        android:visibility="gone"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/item_sexo"
+        android:id="@+id/item_precio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lblEmail"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:visibility="gone"
-        android:layout_below="@id/item_telefono"
+        android:layout_below="@id/item_tipo"
         android:layout_alignParentStart="true"
         android:layout_marginTop="8dp" />
-
-    <TextView
-        android:id="@+id/item_contrato"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lblEmail"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:visibility="gone"
-        android:layout_below="@id/item_sexo"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="8dp" />
-
 </RelativeLayout>

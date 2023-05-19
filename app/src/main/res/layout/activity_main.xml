@@ -1,81 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/imagenfondo"
     android:padding="10dp"
-    android:background="@drawable/imagenfondo"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="35dp"
         android:hint="User Name"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/repassword"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/username"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="-316dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="41dp"
         android:hint="Password"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/signup"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/repassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/password"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="-169dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="31dp"
         android:hint="Password"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/repassword"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="-169dp"
-        android:background="@drawable/btncuenta"
 
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btncuenta"
         android:text="Registrar"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/signin"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/signin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/signup"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="-169dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="52dp"
         android:background="@drawable/btncuenta"
         android:text="Usuario ya existente continuar"
-        android:textColor="#FFFFFF" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="125dp"
-        android:layout_marginTop="160dp"
-        android:text="REGISTRATE"
         android:textColor="#FFFFFF"
-        android:textSize="24sp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/LogoLOGIN"
         android:layout_width="162dp"
         android:layout_height="118dp"
-        android:layout_marginLeft="116dp"
-        android:layout_marginTop="40dp"
-        app:srcCompat="@drawable/logogimnasio"
 
-        />
-</RelativeLayout>
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="42dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@mipmap/logogimnasio" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="59dp"
+        android:text="REGISTRATE"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/username"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

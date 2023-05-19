@@ -5,22 +5,30 @@
       <map>
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/drawable/btncuenta.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/drawable/btnedit.xml" value="0.178125" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.17771084337349397" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout-w936dp/activity_login.xml" value="0.207421875" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/actividades.xml" value="0.2765625" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/actividades_listview.xml" value="0.2765625" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/actividadesalta.xml" value="0.2765625" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_editar_actividad.xml" value="0.22" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_editar_monitor.xml" value="0.33" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_editar_producto.xml" value="0.25" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_editar_sala.xml" value="0.25" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_informacion_actividades.xml" value="0.22" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_informacion_monitor.xml" value="0.25" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_login.xml" value="0.2765625" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_informacion_producto.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_informacion_sala.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_monitor.xml" value="0.23278985507246377" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/activity_productos.xml" value="0.11639492753623189" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/altaclientes.xml" value="0.25" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/altaclientes_listview.xml" value="0.2765625" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/altamonitores.xml" value="0.25" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/altaproducto.xml" value="0.33" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/altasalas.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/altasalas.xml" value="0.25" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/clientes.xml" value="0.25" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/clientes_listview.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/editar_cliente.xml" value="0.25" />
@@ -31,9 +39,12 @@
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/menuprincipal.xml" value="0.33" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/monitores.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/monitores_listview.xml" value="0.22" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/salas.xml" value="0.17028985507246377" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/single_item_clientes.xml" value="0.36277173913043476" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/single_item_monitores.xml" value="0.18" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/salas.xml" value="0.25" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/single_item_actividad.xml" value="0.25" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/single_item_clientes.xml" value="0.33" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/single_item_monitores.xml" value="0.6895604395604396" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/single_item_productos.xml" value="0.25" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/layout/single_item_salas.xml" value="0.25" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/Gimnasio_FCT/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.22135416666666666" />
       </map>

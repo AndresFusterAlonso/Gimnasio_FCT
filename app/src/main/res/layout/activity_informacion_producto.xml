@@ -9,7 +9,7 @@
     >
 
     <TextView
-        android:id="@+id/txtNombreMOIN"
+        android:id="@+id/txtNombrePOIN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -17,58 +17,50 @@
         tools:text="Nombre" />
 
     <TextView
-        android:id="@+id/txtApellidosMOIN"
+        android:id="@+id/txtModeloPOIN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtNombreMOIN"
+        android:layout_below="@id/txtNombrePOIN"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
-        tools:text="Apellidos" />
+        tools:text="Modelo" />
 
     <TextView
-        android:id="@+id/txtdniMOIN"
+        android:id="@+id/txtTipoPOIN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtApellidosMOIN"
+        android:layout_below="@id/txtModeloPOIN"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
-        tools:text="DNI" />
+        tools:text="Tipo" />
 
     <TextView
-        android:id="@+id/txtTelefonoMOIN"
+        android:id="@+id/txtMarcaPOIN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtdniMOIN"
+        android:layout_below="@id/txtTipoPOIN"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
-        tools:text="Teléfono" />
+        tools:text="Marca" />
 
     <TextView
-        android:id="@+id/txtCorreoMOIN"
+        android:id="@+id/txtSalaPOIN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtTelefonoMOIN"
+        android:layout_below="@id/txtMarcaPOIN"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
-        tools:text="Correo" />
+        tools:text="sala" />
 
     <TextView
-        android:id="@+id/txtSexoMOIN"
+        android:id="@+id/txtPrecioPOIN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtCorreoMOIN"
+        android:layout_below="@id/txtSalaPOIN"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
-        tools:text="Sexo" />
+        tools:text="Precio" />
 
-    <TextView
-        android:id="@+id/txtContratoMOIN"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtSexoMOIN"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        tools:text="@string/txtContrato" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -76,7 +68,7 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/btnaceptarMOIN"
+            android:id="@+id/btnaceptarPOIN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="144dp"

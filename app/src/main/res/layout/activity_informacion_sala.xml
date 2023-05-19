@@ -9,7 +9,7 @@
     >
 
     <TextView
-        android:id="@+id/txtNombreMOIN"
+        android:id="@+id/txtNombreSAIN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -17,66 +17,38 @@
         tools:text="Nombre" />
 
     <TextView
-        android:id="@+id/txtApellidosMOIN"
+        android:id="@+id/txtDimensionSAIN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtNombreMOIN"
+        android:layout_below="@id/txtNombreSAIN"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
-        tools:text="Apellidos" />
+        tools:text="Dimension" />
 
     <TextView
-        android:id="@+id/txtdniMOIN"
+        android:id="@+id/txtAforoSAIN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtApellidosMOIN"
+        android:layout_below="@id/txtDimensionSAIN"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
-        tools:text="DNI" />
+        tools:text="Aforo" />
 
     <TextView
-        android:id="@+id/txtTelefonoMOIN"
+        android:id="@+id/txtDescripcionSAIN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtdniMOIN"
+        android:layout_below="@id/txtAforoSAIN"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
-        tools:text="Teléfono" />
-
-    <TextView
-        android:id="@+id/txtCorreoMOIN"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtTelefonoMOIN"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        tools:text="Correo" />
-
-    <TextView
-        android:id="@+id/txtSexoMOIN"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtCorreoMOIN"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        tools:text="Sexo" />
-
-    <TextView
-        android:id="@+id/txtContratoMOIN"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtSexoMOIN"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        tools:text="@string/txtContrato" />
-
+        tools:text="Descripcion" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/btnaceptarMOIN"
+            android:id="@+id/btnaceptarSAIN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="144dp"

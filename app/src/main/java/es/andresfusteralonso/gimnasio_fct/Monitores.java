@@ -72,9 +72,52 @@ public class Monitores extends Activity {
             contratoTextView.setText(monitor.getContrato());
             sexoTextView.setText(monitor.getSexoMO());
 
+            Button btnVerInfo = convertView.findViewById(R.id.btnInformacionCL);
+            btnVerInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Crea un Intent para iniciar la actividad de información detallada
+                    Intent intent = new Intent(getContext(), InformacionMonitor.class);
+
+                    // Pasa los datos necesarios a través del Intent
+                    intent.putExtra("nombreMO", monitor.getNombreMO());
+                    intent.putExtra("apellidosMO", monitor.getApellidosMO());
+                    intent.putExtra("dniMO", monitor.getDniMO());
+                    intent.putExtra("telefonoMO", monitor.getTelefonoMO());
+                    intent.putExtra("correoMO", monitor.getCorreoMO());
+                    intent.putExtra("sexoMO", monitor.getSexoMO());
+                    intent.putExtra("contrato", monitor.getContrato());
+
+                    // Inicia la actividad de información detallada
+                    getContext().startActivity(intent);
+                }
+            });
+
+            Button btnEditar = convertView.findViewById(R.id.btnEditarCL);
+            btnEditar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Crear un Intent para abrir la actividad de edición
+                    Intent intent = new Intent(getContext(), EditarMonitor.class);
+
+                    // Pasar los datos del cliente a la actividad de edición
+                    intent.putExtra("idMO", monitor.getIdMO());
+                    intent.putExtra("nombreMO", monitor.getNombreMO());
+                    intent.putExtra("apellidosMO", monitor.getApellidosMO());
+                    intent.putExtra("dniMO", monitor.getDniMO());
+                    intent.putExtra("telefonoMO", monitor.getTelefonoMO());
+                    intent.putExtra("correoMO", monitor.getCorreoMO());
+                    intent.putExtra("sexoMO", monitor.getSexoMO());
+                    intent.putExtra("contrato", monitor.getContrato());
+
+                    // Iniciar la actividad de edición
+                    getContext().startActivity(intent);
+                }
+            });
+
             return convertView;
         }
-    }
+        }
 
 
     protected void onCreate(Bundle savedInstanceState) {

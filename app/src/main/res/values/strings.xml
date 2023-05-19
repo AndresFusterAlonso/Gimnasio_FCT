@@ -6,6 +6,7 @@
     <string name="ImgView">TODO</string>
     <string name="txtmonitores">Monitor</string>
     <string name="txtclientes">Cliente</string>
+    <string name="btnAltaSalas">AltaSala</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -16,6 +17,9 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">Login failedq</string>
     <string name="txt_Menu">Menu</string>
+    <string name="txt_aforo">Aforo</string>
+    <string name="txt_dimension">dimension</string>
+    <string name="txt_descripcion">descripciom</string>
     <string name="txt_Inventario">Inventario</string>
     <string name="txt_Salas">Salas</string>
     <string name="txt_Horario">Horario</string>
@@ -44,4 +48,13 @@
     <string name="RBMasculino">Masculino</string>
     <string name="RBFemenino">Femenino</string>
     <string name="btnEliminar">Eliminar</string>
+
+    <string-array name="salasDropdown">
+        <item>Sala 1</item>
+        <item>Sala 2</item>
+        <item>Sala 3</item>
+        <item>Sala 4</item>
+        <item>Sala 5</item>
+    </string-array>
+
 </resources>

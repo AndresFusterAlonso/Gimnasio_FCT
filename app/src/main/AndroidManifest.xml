@@ -15,6 +15,24 @@
         android:theme="@style/Theme.Gimnasio_FCT"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".EditarActividad"
+            android:exported="false" />
+        <activity
+            android:name=".InformacionActividades"
+            android:exported="false" />
+        <activity
+            android:name=".EditarSala"
+            android:exported="false" />
+        <activity
+            android:name=".InformacionSala"
+            android:exported="false" />
+        <activity
+            android:name=".InformacionProducto"
+            android:exported="false" />
+        <activity
+            android:name=".EditarProducto"
+            android:exported="false" />
+        <activity
             android:name=".InformacionMonitor"
             android:exported="false" />
         <activity
@@ -32,9 +50,6 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
-        <activity
-            android:name=".Horario_Clientes"
-            android:exported="true" />
         <activity
             android:name=".actividades"
             android:exported="true" />

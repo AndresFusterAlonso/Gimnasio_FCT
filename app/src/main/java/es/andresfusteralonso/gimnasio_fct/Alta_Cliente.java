@@ -46,7 +46,7 @@ public class Alta_Cliente extends Activity {
                 String sexo = radioButton.getText().toString();
                 String tarifa = editTextTarifa.getText().toString();
                 Boolean insert = DB.addClient( nombre,  apellidos,  dni,  telefono,  correo,  sexo,  tarifa);
-                Intent intent = new Intent(getApplicationContext(), Clientes.class);
+                Intent intent = new Intent(getApplicationContext(), InformacionCliente.class);
                 startActivity(intent);
             }
         });

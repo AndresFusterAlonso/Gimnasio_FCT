@@ -9,7 +9,6 @@ public class Cliente {
     private String correo;
     private String tarifa;
     private String sexo;
-
     public int getId() {
         return id;
     }

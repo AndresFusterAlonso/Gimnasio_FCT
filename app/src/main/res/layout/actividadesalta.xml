@@ -3,112 +3,97 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@mipmap/imagenfondo">
 
     <Button
-        android:id="@+id/btnAltaAC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="430dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginBottom="29dp"
-        android:text="@string/btnAceptar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnAtrasAC"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edDescripcionAC" />
-
-    <Button
-        android:id="@+id/btnAtrasAC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="430dp"
-        android:layout_marginEnd="91dp"
-        android:layout_marginBottom="29dp"
-        android:text="@string/txt_Atras"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnAltaAC"
-        app:layout_constraintTop_toBottomOf="@+id/edDescripcionAC" />
-
-    <TextView
-        android:id="@+id/lblNombreAC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="326dp"
-        android:layout_marginBottom="587dp"
-        android:text="@string/lblNombre"
-        app:layout_constraintBottom_toTopOf="@+id/btnAltaAC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/edtNombreAC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginBottom="44dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/edTipoAC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lblNombreAC"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/edTipoAC"
+        android:id="@+id/btnAltaACAL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="71dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="69dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lbltipoAC"
-        app:layout_constraintTop_toBottomOf="@+id/edtNombreAC" />
+        android:layout_marginBottom="29dp"
+        android:background="@drawable/btncuenta"
+        android:text="@string/btnAceptar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCancelarACAL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="29dp"
+        android:background="@drawable/btncuenta"
+        android:text="@android:string/cancel"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/lblNombreACAL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/lblNombre"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edDescripcionAC"
+        android:id="@+id/edtNombreACAL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="69dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="68dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/btnAltaAC"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lblDescripcionAC"
-        app:layout_constraintTop_toBottomOf="@+id/edTipoAC" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/lbltipoAC"
+    <EditText
+        android:id="@+id/edTipoACAL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginBottom="39dp"
+        android:layout_marginTop="31dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/edtNombreACAL"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombreACAL" />
+
+    <EditText
+        android:id="@+id/edDescripcionACAL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/edTipoACAL"
+        app:layout_constraintTop_toBottomOf="@+id/edTipoACAL" />
+
+    <TextView
+        android:id="@+id/lbltipoACAL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="61dp"
         android:text="@string/txttipo"
-        app:layout_constraintBottom_toTopOf="@+id/lblDescripcionAC"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblNombreAC" />
+        app:layout_constraintTop_toBottomOf="@+id/lblNombreACAL" />
 
     <TextView
-        android:id="@+id/lblDescripcionAC"
+        android:id="@+id/lblDescripcionACAL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="447dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="59dp"
         android:text="@string/txtDescripcion"
-        app:layout_constraintBottom_toTopOf="@+id/btnAltaAC"
-        app:layout_constraintEnd_toStartOf="@+id/edDescripcionAC"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbltipoAC" />
+        app:layout_constraintTop_toBottomOf="@+id/lbltipoACAL" />
 </androidx.constraintlayout.widget.ConstraintLayout>

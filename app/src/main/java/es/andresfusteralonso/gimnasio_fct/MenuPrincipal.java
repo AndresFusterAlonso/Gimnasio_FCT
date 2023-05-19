@@ -52,8 +52,8 @@ public class MenuPrincipal extends AppCompatActivity {
         btnHorario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Horario_Clientes.class);
-                startActivity(intent);
+                /*Intent intent = new Intent(getApplicationContext(), Horario_Clientes.class);
+                startActivity(intent);*/
             }
         });
         btnActividades.setOnClickListener(new View.OnClickListener() {
