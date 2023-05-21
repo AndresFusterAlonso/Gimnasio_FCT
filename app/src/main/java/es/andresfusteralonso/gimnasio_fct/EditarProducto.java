@@ -2,6 +2,7 @@ package es.andresfusteralonso.gimnasio_fct;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -9,10 +10,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
 
 import es.andresfusteralonso.gimnasio_fct.db.DbHelper;
 
@@ -39,7 +43,30 @@ public class EditarProducto extends AppCompatActivity {
         editTextMarca = findViewById(R.id.edMarcaSA);
         editTextModelo = findViewById(R.id.edModeloSA);
         editTextPrecio = findViewById(R.id.edPrecioSA);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.salasDropdown, android.R.layout.simple_spinner_item);
+        Spinner spinnerSalas = findViewById(R.id.spinnerSalasPOED);
+        ArrayList<String> datosSpinner = new ArrayList<>();
+        // Obtén una instancia de SQLiteDatabase
+        SQLiteDatabase db = DB.getReadableDatabase();
+
+// Realiza la consulta a la tabla "clientes" para obtener los nombres
+        Cursor cursor = db.rawQuery("SELECT nombreSA FROM salas", null);
+
+// Recorre el cursor y agrega los nombres al ArrayList
+        if (cursor.moveToFirst()) {
+            do {
+                int columnIndex = cursor.getColumnIndex("nombreSA");
+                if (columnIndex != -1) {
+                    String nombre = cursor.getString(columnIndex);
+                    datosSpinner.add(nombre);
+                }
+            } while (cursor.moveToNext());
+        }
+
+// Cierra el cursor y la conexión a la base de datos
+        cursor.close();
+        db.close();
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, datosSpinner);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerSalas.setAdapter(adapter);
 
@@ -49,6 +76,7 @@ public class EditarProducto extends AppCompatActivity {
                 opcionSeleccionada = parent.getItemAtPosition(position).toString();
                 ContentValues values = new ContentValues();
                 values.put("opcion", opcionSeleccionada);
+
                 Toast.makeText(EditarProducto.this, "Opción seleccionada: " + opcionSeleccionada, Toast.LENGTH_SHORT).show();
             }
 
@@ -59,6 +87,7 @@ public class EditarProducto extends AppCompatActivity {
 
             }
         });
+
         // Obtener los datos del cliente del Intent
         Intent intent = getIntent();
         int id = intent.getIntExtra("idPO", 0);
@@ -78,7 +107,7 @@ public class EditarProducto extends AppCompatActivity {
         ProductoID = id;
         // Configurar los demás campos según sea necesario
 
-        Button btnGuardar = findViewById(R.id.btnAceptarSA);
+        ImageButton btnGuardar = findViewById(R.id.btnAceptarSA);
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -117,7 +146,7 @@ public class EditarProducto extends AppCompatActivity {
             }
         });
 
-        Button btnEliminar = findViewById(R.id.btnEliminarPOED);
+        ImageButton btnEliminar = findViewById(R.id.btnEliminarPOED);
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -127,7 +156,7 @@ public class EditarProducto extends AppCompatActivity {
             }
         });
 
-        Button btnCancelar = findViewById(R.id.btnCancelarSAED);
+        ImageButton btnCancelar = findViewById(R.id.btnCancelarSAED);
         btnCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

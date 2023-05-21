@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class InformacionMonitor extends Activity {
@@ -15,7 +15,7 @@ public class InformacionMonitor extends Activity {
     private TextView textViewCorreo;
     private TextView textViewSexo;
     private TextView textViewContrato;
-    private Button btnAceptar;
+    private ImageButton btnAceptar;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

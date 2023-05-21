@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -45,7 +46,7 @@ public class EditarActividad extends AppCompatActivity {
         ActividadID = id;
         // Configurar los demás campos según sea necesario
 
-        Button btnGuardar = findViewById(R.id.btnAceptarACED);
+        ImageButton btnGuardar = findViewById(R.id.btnAceptarACED);
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,7 +77,7 @@ public class EditarActividad extends AppCompatActivity {
             }
         });
 
-        Button btnEliminar = findViewById(R.id.btnEliminarACED);
+        ImageButton btnEliminar = findViewById(R.id.btnEliminarACED);
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,7 +87,7 @@ public class EditarActividad extends AppCompatActivity {
             }
         });
 
-        Button btnCancelar = findViewById(R.id.btnCancelarACED);
+        ImageButton btnCancelar = findViewById(R.id.btnCancelarACED);
         btnCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

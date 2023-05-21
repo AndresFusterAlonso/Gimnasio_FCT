@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -14,8 +14,8 @@ import es.andresfusteralonso.gimnasio_fct.db.DbHelper;
 public class Alta_Cliente extends Activity {
     private EditText editTextName, editTextApellidos, editTextdni, editTextPhone, editTextcorreo, editTextTarifa;
     private RadioGroup radioGroupSexo;
-    private Button buttonSave;
-    private Button buttonCancelar;
+    private ImageButton buttonSave;
+    private ImageButton buttonCancelar;
     private DbHelper DB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

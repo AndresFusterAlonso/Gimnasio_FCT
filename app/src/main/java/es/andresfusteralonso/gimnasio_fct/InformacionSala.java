@@ -3,7 +3,7 @@ package es.andresfusteralonso.gimnasio_fct;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +13,7 @@ public class InformacionSala extends AppCompatActivity {
     private TextView textViewDimension;
     private TextView textViewAforo;
     private TextView textViewDescripcion;
-    private Button btnAceptar;
+    private ImageButton btnAceptar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

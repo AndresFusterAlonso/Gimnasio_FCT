@@ -36,15 +36,13 @@
 
     </RadioGroup>
 
-    <Button
+    <ImageButton
         android:id="@+id/btnGuardarCLED"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
         android:layout_marginStart="13dp"
         android:layout_marginBottom="19dp"
-        android:background="@drawable/btncuenta"
-        android:text="@string/btnGuardar"
-        android:textColor="#FFFFFF"
+        android:background="@mipmap/aprobar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -174,15 +172,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rgCLAL" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnEliminarCLED"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="50dp"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginBottom="19dp"
-        android:background="@drawable/btncuenta"
-        android:text="@string/btnEliminar"
-        android:textColor="#FFFFFF"
+        android:background="@mipmap/borrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnCancelar" />
 
@@ -209,15 +205,13 @@
         app:layout_constraintBottom_toTopOf="@+id/lblTelefonoCLED"
         app:layout_constraintEnd_toStartOf="@+id/eddniCLED" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnCancelar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
         android:layout_marginEnd="21dp"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/btncuenta"
-        android:text="@android:string/cancel"
-        android:textColor="#FFFFFF"
+        android:background="@mipmap/cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -31,8 +32,8 @@ public class Clientes extends Activity {
     private RadioGroup radioGroupSexo;
     private EditText editTextTarifa;
     private Button btnInsertar;
-    private Button buttonAddClient;
-    private Button btnAtras;
+    private ImageButton buttonAddClient;
+    private ImageButton btnAtras;
     private DbHelper DB;
     private ListView listViewClientes;
     private ArrayAdapter<Cliente> adapterClientes;
@@ -72,7 +73,7 @@ public class Clientes extends Activity {
             tarifaTextView.setText(cliente.getTarifa());
             sexoTextView.setText(cliente.getSexo());
 
-            Button btnVerInfo = convertView.findViewById(R.id.btnInformacionCL);
+            ImageButton btnVerInfo = convertView.findViewById(R.id.btnInformacionCL);
             btnVerInfo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -93,7 +94,7 @@ public class Clientes extends Activity {
                 }
             });
 
-            Button btnEditar = convertView.findViewById(R.id.btnEditarCL);
+            ImageButton btnEditar = convertView.findViewById(R.id.btnEditarCL);
             btnEditar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

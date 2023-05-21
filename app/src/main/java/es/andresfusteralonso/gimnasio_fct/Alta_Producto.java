@@ -9,8 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -21,8 +21,8 @@ import es.andresfusteralonso.gimnasio_fct.db.DbHelper;
 public class Alta_Producto extends Activity {
     private String opcionSeleccionada;
     private EditText editTextNombre, EditTextTipo, EditTextMarca, EditTextModelo, EditTextPrecio;
-    private Button buttonGuardar;
-    private Button buttonCancelar;
+    private ImageButton buttonGuardar;
+    private ImageButton buttonCancelar;
     private DbHelper DB;
 
     @Override

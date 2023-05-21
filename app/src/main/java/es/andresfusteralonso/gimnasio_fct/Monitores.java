@@ -11,8 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -31,8 +31,8 @@ public class Monitores extends Activity {
     private EditText editTextCorreo;
     private RadioGroup radioGroupSexo;
     private EditText editTextContrato;
-    private Button btnAtras;
-    private Button buttonAddMonitor;
+    private ImageButton btnAtras;
+    private ImageButton buttonAddMonitor;
     private DbHelper DB;
     private ListView listViewMonitores;
     private ArrayAdapter<Monitor> adapterMonitores;
@@ -72,7 +72,7 @@ public class Monitores extends Activity {
             contratoTextView.setText(monitor.getContrato());
             sexoTextView.setText(monitor.getSexoMO());
 
-            Button btnVerInfo = convertView.findViewById(R.id.btnInformacionCL);
+            ImageButton btnVerInfo = convertView.findViewById(R.id.btnInformacionCL);
             btnVerInfo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -93,7 +93,7 @@ public class Monitores extends Activity {
                 }
             });
 
-            Button btnEditar = convertView.findViewById(R.id.btnEditarCL);
+            ImageButton btnEditar = convertView.findViewById(R.id.btnEditarCL);
             btnEditar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -31,8 +32,8 @@ public class Inventario extends Activity {
     private RadioGroup radioGroupSexo;
     private EditText editTextTarifa;
     private Button btnInsertar;
-    private Button buttonAddProducto;
-    private Button btnAtras;
+    private ImageButton buttonAddProducto;
+    private ImageButton btnAtras;
     private DbHelper DB;
     private ListView listViewProducto;
     private ArrayAdapter<Producto> adapterProductos;
@@ -73,7 +74,7 @@ public class Inventario extends Activity {
 
             salaTextView.setText(productos.getSala());
 
-            Button btnVerInfo = convertView.findViewById(R.id.btnInformacionCL);
+            ImageButton btnVerInfo = convertView.findViewById(R.id.btnInformacionCL);
             btnVerInfo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -96,7 +97,7 @@ public class Inventario extends Activity {
                 }
             });
 
-            Button btnEditar = convertView.findViewById(R.id.btnEditarCL);
+            ImageButton btnEditar = convertView.findViewById(R.id.btnEditarCL);
             btnEditar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -104,7 +105,7 @@ public class Inventario extends Activity {
                     Intent intent = new Intent(getContext(), EditarProducto.class);
 
                     // Pasar los datos del cliente a la actividad de edición
-                    intent.putExtra("idPO", productos.getNombrePO());
+                    intent.putExtra("idPO", productos.getIdPO());
                     intent.putExtra("nombrePO", productos.getNombrePO());
                     intent.putExtra("tipoPO", productos.getTipoPO());
                     intent.putExtra("sala_id", productos.getSala());

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -61,7 +62,7 @@ public class EditarCliente extends Activity{
         ClienteID = id;
     // Configurar los demás campos según sea necesario
 
-    Button btnGuardar = findViewById(R.id.btnGuardarCLED);
+    ImageButton btnGuardar = findViewById(R.id.btnGuardarCLED);
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,7 +103,7 @@ public class EditarCliente extends Activity{
             }
         });
 
-        Button btnEliminar = findViewById(R.id.btnEliminarCLED);
+        ImageButton btnEliminar = findViewById(R.id.btnEliminarCLED);
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,7 +113,7 @@ public class EditarCliente extends Activity{
             }
         });
 
-        Button btnCancelar = findViewById(R.id.btnCancelar);
+        ImageButton btnCancelar = findViewById(R.id.btnCancelar);
         btnCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

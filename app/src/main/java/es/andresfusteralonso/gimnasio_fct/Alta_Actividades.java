@@ -6,13 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import es.andresfusteralonso.gimnasio_fct.db.DbHelper;
 
 public class Alta_Actividades extends Activity {
     private EditText editTextName, editTextTipo, editTextDescripcion;
-    private Button buttonSaveAC;
-    private Button buttonCancelar;
+    private ImageButton buttonSaveAC;
+    private ImageButton buttonCancelar;
     private DbHelper DB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

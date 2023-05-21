@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -26,8 +27,8 @@ public class Salas extends Activity {
     private EditText editTextDimension;
     private EditText editTextAforo;
     private EditText editTextDescripcion;
-    private Button btnAtras;
-    private Button buttonAddSala;
+    private ImageButton btnAtras;
+    private ImageButton buttonAddSala;
     private Button BotonInformacion;
     private DbHelper DB;
     private ListView listViewSalas;
@@ -63,7 +64,7 @@ public class Salas extends Activity {
             descripcionTextView.setText(salas.getDescripcion());
 
 
-            Button btnVerInfo = convertView.findViewById(R.id.btnInformacionCL);
+            ImageButton btnVerInfo = convertView.findViewById(R.id.btnInformacionCL);
             btnVerInfo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -84,7 +85,7 @@ public class Salas extends Activity {
                 }
             });
 
-            Button btnEditar = convertView.findViewById(R.id.btnEditarCL);
+            ImageButton btnEditar = convertView.findViewById(R.id.btnEditarCL);
             btnEditar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

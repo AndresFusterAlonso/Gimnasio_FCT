@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -58,7 +59,7 @@ public class EditarMonitor extends Activity {
         MonitorID = id;
         // Configurar los demás campos según sea necesario
 
-        Button btnGuardar = findViewById(R.id.btnAceptarMO);
+        ImageButton btnGuardar = findViewById(R.id.btnAceptarMO);
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,7 +100,7 @@ public class EditarMonitor extends Activity {
             }
         });
 
-        Button btnEliminar = findViewById(R.id.btnEliminarMOED);
+        ImageButton btnEliminar = findViewById(R.id.btnEliminarMOED);
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,7 +110,7 @@ public class EditarMonitor extends Activity {
             }
         });
 
-        Button btnCancelar = findViewById(R.id.btnCancelarMO);
+        ImageButton btnCancelar = findViewById(R.id.btnCancelarMO);
         btnCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

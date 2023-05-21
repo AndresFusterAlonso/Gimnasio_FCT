@@ -27,8 +27,8 @@ public class actividades extends Activity {
     private EditText editTextApellidos;
     private EditText editTextDNI;
     private Button btnInsertar;
-    private Button buttonAddActividad;
-    private Button btnAtras;
+    private ImageButton buttonAddActividad;
+    private ImageButton btnAtras;
     private DbHelper DB;
     private ListView listViewActividades;
     private ArrayAdapter<Actividad> adapterActividades;
@@ -54,7 +54,6 @@ public class actividades extends Activity {
             TextView nombreTextView = convertView.findViewById(R.id.item_nombre);
             TextView TipoTextView = convertView.findViewById(R.id.item_tipo);
             TextView DescripcionTextView = convertView.findViewById(R.id.item_descripcion);
-;
             TextView sexoTextView = convertView.findViewById(R.id.item_sexo);
 
             // Configurar el contenido de los textviews con los valores de nombre y correo electrónico del cliente

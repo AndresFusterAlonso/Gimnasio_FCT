@@ -7,16 +7,14 @@
     android:background="@mipmap/imagenfondo"
     >
 
-    <Button
+    <ImageButton
         android:id="@+id/btnEliminarMOED"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
         android:layout_marginStart="11dp"
         android:layout_marginEnd="11dp"
         android:layout_marginBottom="35dp"
-        android:background="@drawable/btncuenta"
-        android:text="@string/btnEliminar"
-        android:textColor="#FFFFFF"
+        android:background="@mipmap/borrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnCancelarMO"
         app:layout_constraintStart_toEndOf="@+id/btnAceptarMO" />
@@ -195,27 +193,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnAceptarMO"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
         android:layout_marginStart="14dp"
         android:layout_marginBottom="35dp"
-        android:background="@drawable/btncuenta"
-        android:text="@string/btnAceptar"
-        android:textColor="#FFFFFF"
+        android:background="@mipmap/aprobar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnCancelarMO"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
         android:layout_marginEnd="14dp"
         android:layout_marginBottom="35dp"
-        android:background="@drawable/btncuenta"
-        android:text="@android:string/cancel"
-        android:textColor="#FFFFFF"
+        android:background="@mipmap/cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
