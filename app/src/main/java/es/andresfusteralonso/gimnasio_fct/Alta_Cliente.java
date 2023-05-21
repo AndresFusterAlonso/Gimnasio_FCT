@@ -47,6 +47,20 @@ public class Alta_Cliente extends Activity {
                 String tarifa = editTextTarifa.getText().toString();
                 Boolean insert = DB.addClient( nombre,  apellidos,  dni,  telefono,  correo,  sexo,  tarifa);
                 Intent intent = new Intent(getApplicationContext(), InformacionCliente.class);
+                intent.putExtra("nombreCL", nombre);
+                intent.putExtra("apellidosCL", apellidos);
+                intent.putExtra("dniCL", dni);
+                intent.putExtra("telefonoCL", telefono);
+                intent.putExtra("correoCL", correo);
+                intent.putExtra("sexoCL", sexo);
+                intent.putExtra("tarifaCL", tarifa);
+                // Agregar los demás datos según sea necesario
+
+                // Abrir la actividad InformacionCliente
+                startActivity(intent);
+
+                // Finalizar la actividad de edición
+                finish();
                 startActivity(intent);
             }
         });

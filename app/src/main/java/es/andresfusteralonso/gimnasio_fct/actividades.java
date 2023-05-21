@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -60,7 +61,7 @@ public class actividades extends Activity {
             nombreTextView.setText(actividad.getNombreAC());
             TipoTextView.setText(actividad.getTipoAC());
             DescripcionTextView.setText(actividad.getDescripcionAC());
-            Button btnVerInfo = convertView.findViewById(R.id.btnInformacionAC);
+            ImageButton btnVerInfo = convertView.findViewById(R.id.btnInformacionAC);
             btnVerInfo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -77,7 +78,7 @@ public class actividades extends Activity {
                 }
             });
 
-            Button btnEditar = convertView.findViewById(R.id.btnEditarAC);
+            ImageButton btnEditar = convertView.findViewById(R.id.btnEditarAC);
             btnEditar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -85,7 +86,7 @@ public class actividades extends Activity {
                     Intent intent = new Intent(getContext(), EditarActividad.class);
 
                     // Pasar los datos del cliente a la actividad de edición
-                    intent.putExtra("idCL", actividad.getIdAC());
+                    intent.putExtra("idAC", actividad.getIdAC());
                     intent.putExtra("nombreAC", actividad.getNombreAC());
                     intent.putExtra("tipoAC", actividad.getTipoAC());
                     intent.putExtra("descripcionAC", actividad.getDescripcionAC());

@@ -84,11 +84,12 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
         sqLiteDatabase.execSQL("CREATE TABLE users (username TEXT PRIMARY KEY, password TEXT)");
-        sqLiteDatabase.execSQL("CREATE TABLE clientes (idCL INTEGER PRIMARY KEY AUTOINCREMENT, nombreCL TEXT NOT NULL, apellidosCL TEXT, dniCL TEXT, telefonoCL INTEGER, correoCL TEXT, sexoCL TEXT, tarifa TEXT)");
-        sqLiteDatabase.execSQL("CREATE TABLE monitores (idMO INTEGER PRIMARY KEY AUTOINCREMENT, nombreMO TEXT NOT NULL, apellidosMO TEXT, dniMO TEXT, telefonoMO INTEGER, correoMO TEXT, sexoMO TEXT, contrato TEXT)");
-        sqLiteDatabase.execSQL("CREATE TABLE inventario (idPO INTEGER PRIMARY KEY AUTOINCREMENT, nombrePO TEXT NOT NULL, tipoPO TEXT, sala_id INTEGER, marca INTEGER, modelo TEXT, precio REAL, FOREIGN KEY(sala_id) REFERENCES salas(idSA))");
+        sqLiteDatabase.execSQL("CREATE TABLE clientes (idCL INTEGER PRIMARY KEY AUTOINCREMENT, nombreCL TEXT NOT NULL, apellidosCL TEXT, dniCL TEXT UNIQUE, telefonoCL INTEGER, correoCL TEXT, sexoCL TEXT, tarifa TEXT)");
+        sqLiteDatabase.execSQL("CREATE TABLE monitores (idMO INTEGER PRIMARY KEY AUTOINCREMENT, nombreMO TEXT NOT NULL, apellidosMO TEXT, dniMO TEXT UNIQUE, telefonoMO INTEGER, correoMO TEXT, sexoMO TEXT, contrato TEXT)");
         sqLiteDatabase.execSQL("CREATE TABLE salas (idSA INTEGER PRIMARY KEY AUTOINCREMENT, nombreSA TEXT NOT NULL, dimension REAL, aforo INTEGER, descripcion TEXT)");
         sqLiteDatabase.execSQL("CREATE TABLE actividades (idAC INTEGER PRIMARY KEY AUTOINCREMENT, nombreAC TEXT NOT NULL, tipoAC TEXT, descripcionAC TEXT)");
+        sqLiteDatabase.execSQL("CREATE TABLE inventario (idPO INTEGER PRIMARY KEY AUTOINCREMENT, nombrePO TEXT NOT NULL, tipoPO TEXT, sala_id INTEGER, marca TEXT, modelo TEXT, precio REAL, FOREIGN KEY(sala_id) REFERENCES salas(idSA))");
+        sqLiteDatabase.execSQL("CREATE TABLE horarios (idHO INTEGER PRIMARY KEY AUTOINCREMENT, sala_horarios_id INTEGER, actividad_id INTEGER, dia TEXT, h_inicio TEXT, h_fin TEXT, monitor_id INTEGER, FOREIGN KEY(sala_horarios_id) REFERENCES salas(idSA), FOREIGN KEY(actividad_id) REFERENCES actividades(idAC), FOREIGN KEY(monitor_id) REFERENCES monitores(idMO))");
 
 
     }

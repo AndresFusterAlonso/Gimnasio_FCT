@@ -80,7 +80,7 @@ public class EditarActividad extends AppCompatActivity {
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DB.deleteDataCL(ActividadID);
+                DB.deleteDataAC(ActividadID);
                 Intent intent = new Intent(EditarActividad.this, actividades.class);
                 startActivity(intent);
             }

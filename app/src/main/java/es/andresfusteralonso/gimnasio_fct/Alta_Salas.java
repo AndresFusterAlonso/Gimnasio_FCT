@@ -35,7 +35,18 @@ public class Alta_Salas extends Activity {
                 String aforo = EditTextaforo.getText().toString();
                 String descripcion = EditTextdescripcion.getText().toString();
                 Boolean insert = DB.addSala( nombre,  dimension, aforo,  descripcion);
-                Intent intent = new Intent(getApplicationContext(), Salas.class);
+                Intent intent = new Intent(getApplicationContext(), InformacionSala.class);
+                intent.putExtra("nombreSA", nombre);
+                intent.putExtra("dimension", dimension);
+                intent.putExtra("aforo", aforo);
+                intent.putExtra("descripcion", descripcion);
+                // Agregar los demás datos según sea necesario
+
+                // Abrir la actividad InformacionCliente
+                startActivity(intent);
+
+                // Finalizar la actividad de edición
+                finish();
                 startActivity(intent);
             }
         });

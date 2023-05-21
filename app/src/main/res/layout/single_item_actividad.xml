@@ -6,34 +6,34 @@
     android:paddingLeft="12dp"
     android:paddingBottom="12dp">
 
-    <Button
+    <ImageButton
         android:id="@+id/btnInformacionAC"
-        android:layout_width="wrap_content"
-        android:layout_height="29dp"
+        android:layout_width="55dp"
+        android:layout_height="38dp"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="10dp"
-        android:background="@drawable/btncuenta"
-        android:text="INFO" />
+        android:layout_marginEnd="5dp"
+        android:background="@mipmap/informacion"
+        android:textColor="#FFFFFF" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnEditarAC"
-        android:layout_width="wrap_content"
-        android:layout_height="29dp"
+        android:layout_width="55dp"
+        android:layout_height="38dp"
         android:layout_marginTop="10dp"
-
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="30dp"
         android:layout_toStartOf="@id/btnInformacionAC"
-        android:background="@drawable/btncuenta"
-        android:text="EDITAR" />
+        android:background="@mipmap/lapiz"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/item_nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:text="@string/lblNombre"
         android:textColor="#FFFFFF"
-        android:textSize="35sp"
-        android:layout_alignParentStart="true" />
+        android:textSize="35sp" />
 
     <TextView
         android:id="@+id/item_tipo"

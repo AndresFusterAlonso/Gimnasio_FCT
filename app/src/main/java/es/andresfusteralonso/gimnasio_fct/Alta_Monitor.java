@@ -46,7 +46,21 @@ public class Alta_Monitor extends Activity {
                 String sexo = radioButton.getText().toString();
                 String contrato = editTextContrato.getText().toString();
                 Boolean insert = DB.addMonitor( nombre,  apellidos,  dni,  telefono,  correo,  sexo,  contrato);
-                Intent intent = new Intent(getApplicationContext(), Monitores.class);
+                Intent intent = new Intent(getApplicationContext(), InformacionMonitor.class);
+                intent.putExtra("nombreMO", nombre);
+                intent.putExtra("apellidosMO", apellidos);
+                intent.putExtra("dniMO", dni);
+                intent.putExtra("telefonoMO", telefono);
+                intent.putExtra("correoMO", correo);
+                intent.putExtra("sexoMO", sexo);
+                intent.putExtra("contrato", contrato);
+                // Agregar los demás datos según sea necesario
+
+                // Abrir la actividad InformacionCliente
+                startActivity(intent);
+
+                // Finalizar la actividad de edición
+                finish();
                 startActivity(intent);
             }
         });

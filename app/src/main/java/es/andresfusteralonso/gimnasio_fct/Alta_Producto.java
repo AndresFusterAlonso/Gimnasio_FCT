@@ -94,7 +94,20 @@ public class Alta_Producto extends Activity {
                     String precio = EditTextPrecio.getText().toString();
                     String Salas = opcionSeleccionada;
                     Boolean insert = DB.addProducto(nombre, tipo, Salas, Marca, Modelo, precio);
-                    Intent intent = new Intent(getApplicationContext(), Inventario.class);
+                    Intent intent = new Intent(getApplicationContext(), InformacionProducto.class);
+                    intent.putExtra("nombrePO", nombre);
+                    intent.putExtra("tipoPO", tipo);
+                    intent.putExtra("sala_id", Salas);
+                    intent.putExtra("marca", Marca);
+                    intent.putExtra("modelo", Modelo);
+                    intent.putExtra("precio", precio);
+                    // Agregar los demás datos según sea necesario
+
+                    // Abrir la actividad InformacionCliente
+                    startActivity(intent);
+
+                    // Finalizar la actividad de edición
+                    finish();
                     startActivity(intent);
                 }
             });

@@ -33,6 +33,16 @@ public class Alta_Actividades extends Activity {
                 String Descripcion = editTextDescripcion.getText().toString();
                 Boolean insert = DB.addActividad( nombre,  Tipo,  Descripcion);
                 Intent intent = new Intent(getApplicationContext(), InformacionActividades.class);
+                intent.putExtra("nombreAC", nombre);
+                intent.putExtra("tipoAC", Tipo);
+                intent.putExtra("descripcionAC", Descripcion);
+                // Agregar los demás datos según sea necesario
+
+                // Abrir la actividad InformacionActividad
+                startActivity(intent);
+
+                // Finalizar la actividad de edición
+                finish();
                 startActivity(intent);
             }
         });
