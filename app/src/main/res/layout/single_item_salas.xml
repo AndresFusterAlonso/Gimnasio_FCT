@@ -11,8 +11,8 @@
         android:layout_width="55dp"
         android:layout_height="38dp"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="5dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="63dp"
         android:background="@mipmap/informacion"
         android:textColor="#FFFFFF" />
 
@@ -21,10 +21,23 @@
         android:layout_width="55dp"
         android:layout_height="38dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
         android:layout_toStartOf="@id/btnInformacionCL"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="120dp"
         android:background="@mipmap/editar"
         android:textColor="#FFFFFF" />
+
+    <ImageButton
+        android:id="@+id/HorarioSala"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@id/btnEditarCL"
+        android:background="@mipmap/calendario"
+        android:textColor="#FFFFFF" />
+
 
     <TextView
         android:id="@+id/item_nombre"

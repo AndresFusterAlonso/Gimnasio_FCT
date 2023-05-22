@@ -49,12 +49,14 @@
     <string name="RBFemenino">Femenino</string>
     <string name="btnEliminar">Eliminar</string>
 
-    <string-array name="salasDropdown">
-        <item>Sala 1</item>
-        <item>Sala 2</item>
-        <item>Sala 3</item>
-        <item>Sala 4</item>
-        <item>Sala 5</item>
+    <string-array name="diasdelasemana">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miercoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
+        <item>Sabado</item>
+        <item>Domingo</item>
     </string-array>
 
 </resources>

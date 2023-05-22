@@ -104,6 +104,18 @@ public class Salas extends Activity {
                 }
             });
 
+            ImageButton btnHorario = convertView.findViewById(R.id.HorarioSala);
+            btnHorario.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Crear un Intent para abrir la actividad de edición
+                    Intent intent = new Intent(getContext(), Alta_Horario.class);
+                    intent.putExtra("nombreSA", salas.getNombreSA());
+                    // Iniciar la actividad de edición
+                    getContext().startActivity(intent);
+                }
+            });
+
             return convertView;
         }
     }

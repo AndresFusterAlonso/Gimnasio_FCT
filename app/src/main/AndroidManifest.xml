@@ -15,6 +15,18 @@
         android:theme="@style/Theme.Gimnasio_FCT"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".InformacionHorario"
+            android:exported="false" />
+        <activity
+            android:name=".EditarHorario"
+            android:exported="false" />
+        <activity
+            android:name=".Alta_Horario"
+            android:exported="false" />
+        <activity
+            android:name=".Horario"
+            android:exported="false" />
+        <activity
             android:name=".EditarActividad"
             android:exported="false" />
         <activity
@@ -37,9 +49,6 @@
             android:exported="false" />
         <activity
             android:name=".EditarMonitor"
-            android:exported="false" />
-        <activity
-            android:name=".Monitor"
             android:exported="false" />
         <activity
             android:name=".InformacionCliente"
@@ -88,7 +97,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

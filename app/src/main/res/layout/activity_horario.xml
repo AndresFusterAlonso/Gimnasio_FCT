@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tablaHorario"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/imagenfondo"
+    tools:context=".Horario">
+
+    <!-- Fila de encabezado -->
+    <TableRow>
+
+        <TextView
+            android:id="@+id/diaTable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="Día"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/HoraTableI"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="Hora de inicio"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/HoraTableF"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="Hora de fin"
+            android:textStyle="bold" />
+    </TableRow>
+
+</TableLayout>

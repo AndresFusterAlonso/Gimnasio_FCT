@@ -22,6 +22,8 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String TABLE_SALAS = "salas";
     public static final String TABLE_INVENTARIO = "inventario";
     public static final String TABLE_ACTIVIDADES = "actividades";
+    public static final String TABLE_HORARIOS = "horarios";
+
 
     //Users Info
     public static final String COLUMN_USERNAME = "username";
@@ -73,6 +75,15 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String COLUMN_TIPOAC = "tipoAC";
     public static final String COLUMN_DESCRIPCIONAC = "descripcionAC";
 
+    //Horario Info
+    public static final String COLUMN_IDHO = "idAC";
+    public static final String COLUMN_SALANOMBREHO = "sala_nombre";
+    public static final String COLUMN_ACTIVIDADNOMBREHO = "actividad_nombre";
+    public static final String COLUMN_DIAHO = "dia";
+    public static final String COLUMN_HORAINCIO = "h_incio";
+    public static final String COLUMN_HORAFIN = "h_fin";
+    public static final String COLUMN_MONITORNOMBREHO = "monitor_nombre";
+
     private Context mContext;
 
     public DbHelper(@Nullable Context context) {
@@ -89,7 +100,7 @@ public class DbHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("CREATE TABLE salas (idSA INTEGER PRIMARY KEY AUTOINCREMENT, nombreSA TEXT NOT NULL, dimension REAL, aforo INTEGER, descripcion TEXT)");
         sqLiteDatabase.execSQL("CREATE TABLE actividades (idAC INTEGER PRIMARY KEY AUTOINCREMENT, nombreAC TEXT NOT NULL, tipoAC TEXT, descripcionAC TEXT)");
         sqLiteDatabase.execSQL("CREATE TABLE inventario (idPO INTEGER PRIMARY KEY AUTOINCREMENT, nombrePO TEXT NOT NULL, tipoPO TEXT, sala_id INTEGER, marca TEXT, modelo TEXT, precio REAL, FOREIGN KEY(sala_id) REFERENCES salas(idSA))");
-        sqLiteDatabase.execSQL("CREATE TABLE horarios (idHO INTEGER PRIMARY KEY AUTOINCREMENT, sala_horarios_id INTEGER, actividad_id INTEGER, dia TEXT, h_inicio TEXT, h_fin TEXT, monitor_id INTEGER, FOREIGN KEY(sala_horarios_id) REFERENCES salas(idSA), FOREIGN KEY(actividad_id) REFERENCES actividades(idAC), FOREIGN KEY(monitor_id) REFERENCES monitores(idMO))");
+        sqLiteDatabase.execSQL("CREATE TABLE horarios (idHO INTEGER PRIMARY KEY AUTOINCREMENT, sala_nombre TEXT, actividad_nombre TEXT, dia TEXT, h_inicio TEXT, h_fin TEXT, monitor_nombre TEXT, FOREIGN KEY(sala_nombre) REFERENCES salas(nombreSA), FOREIGN KEY(actividad_nombre) REFERENCES actividades(nombreAC), FOREIGN KEY(monitor_nombre) REFERENCES monitores(nombreMO))");
 
 
     }
@@ -251,6 +262,21 @@ public class DbHelper extends SQLiteOpenHelper {
         contentValues.put("tipoAC", tipoAC);
         contentValues.put("descripcionAC", descripcionAC);
         long result = db.insert(TABLE_ACTIVIDADES, null, contentValues);
+        if (result ==-1) return false;
+        else
+            return true;
+    }
+
+    public Boolean addHorario(String sala_nombre, String actividad_nombre, String dia, String h_incio, String h_fin, String monitor_nombre) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("sala_nombre", sala_nombre);
+        contentValues.put("actividad_nombre", actividad_nombre);
+        contentValues.put("dia", dia);
+        contentValues.put("h_inicio", h_incio);
+        contentValues.put("h_fin", h_fin);
+        contentValues.put("monitor_nombre", monitor_nombre);
+        long result = db.insert(TABLE_HORARIOS, null, contentValues);
         if (result ==-1) return false;
         else
             return true;
