@@ -166,7 +166,7 @@ public class Alta_Horario extends AppCompatActivity {
                 String HoraFin = EditTextHoraFin.getText().toString();
                 String monitores = opcionSeleccionadaMonitores;
                 Boolean insert = DB.addHorario(sala, actividades, dia, HoraInicio, HoraFin, monitores);
-                Intent intent = new Intent(getApplicationContext(), InformacionProducto.class);
+                Intent intent = new Intent(getApplicationContext(), InformacionHorario.class);
                 intent.putExtra("sala_nombre", sala);
                 intent.putExtra("actividad_nombre", actividades);
                 intent.putExtra("dia", dia);

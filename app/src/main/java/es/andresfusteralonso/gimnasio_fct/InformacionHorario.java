@@ -30,12 +30,12 @@ public class InformacionHorario extends AppCompatActivity {
 
         // Obtener los datos del cliente actualizado de la actividad anterior
         Intent intent = getIntent();
-        String sala = intent.getStringExtra("sala_horarios_id");
-        String actividad = intent.getStringExtra("actividad_id");
+        String sala = intent.getStringExtra("sala_nombre");
+        String actividad = intent.getStringExtra("actividad_nombre");
         String dia = intent.getStringExtra("dia");
         String horaInicio = intent.getStringExtra("h_inicio");
         String horaFin = intent.getStringExtra("h_fin");
-        String monitor = intent.getStringExtra("monitor_id");
+        String monitor = intent.getStringExtra("monitor_nombre");
         // Mostrar los datos en los TextViews de la interfaz
         getTextViewSala.setText(sala);
         textViewActividad.setText(actividad);

@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/imagenfondo"
+    >
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,9 +16,7 @@
     android:background="@mipmap/imagenfondo"
     tools:context=".Horario">
 
-    <!-- Fila de encabezado -->
     <TableRow>
-
         <TextView
             android:id="@+id/diaTable"
             android:layout_width="0dp"
@@ -18,16 +24,18 @@
             android:layout_weight="1"
             android:padding="8dp"
             android:text="Día"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/HoraTableI"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="8dp"
-            android:text="Hora de inicio"
-            android:textStyle="bold" />
+            android:text="Hora inicio"
+            android:textStyle="bold"
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/HoraTableF"
@@ -35,8 +43,19 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="8dp"
-            android:text="Hora de fin"
-            android:textStyle="bold" />
-    </TableRow>
+            android:text="Hora fin"
+            android:textStyle="bold"
+            android:gravity="center" />
 
+        <TextView
+            android:id="@+id/ActividadTableF"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="Actividad"
+            android:textStyle="bold"
+            android:gravity="center" />
+    </TableRow>
 </TableLayout>
+</ScrollView>
