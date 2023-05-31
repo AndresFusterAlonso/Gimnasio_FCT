@@ -36,8 +36,42 @@
         android:layout_width="55dp"
         android:layout_height="40dp"
         android:layout_marginTop="52dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginEnd="50dp"
         android:background="@mipmap/flechahaciaatras"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMonitorAltaP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="120dp"
+        android:text="ALTA MONITORES"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtAnadirMonitorP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="11dp"
+        android:text="Añadir monitor"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAltaMO" />
+
+    <TextView
+        android:id="@+id/txtAtrasMonitorP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="58dp"
+        android:text="@string/txt_Atras"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAtrasMO" />
 </androidx.constraintlayout.widget.ConstraintLayout>

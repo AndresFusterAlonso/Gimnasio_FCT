@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "209526620924",
+    "project_id": "gimnasio-b0493",
+    "storage_bucket": "gimnasio-b0493.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209526620924:android:6edff1871dc30389a98d79",
+        "android_client_info": {
+          "package_name": "es.andresfusteralonso.gimnasio_fct"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209526620924-ru853cgcm6abu9tm71vunqn6t61e9g86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKDeyAGrdka7yJOvV0FU74DQJzjc4k8ZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209526620924-ru853cgcm6abu9tm71vunqn6t61e9g86.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
